@@ -13,6 +13,12 @@
 # TODO: VLC & set as the default video player
 # TODO: Set gthumb as the default image viewing program
 # TODO: gsettings enable touch-to-click touchpad behavior
+# TODO: Move software installed in the UNPACKAGED section to /opt
+
+##############
+## FOREWORD ##
+##############
+# All the things that should be checked and done before we start to make any changes.
 
 if [ $EUID != 0 ]; then
     echo "You've run this script without elevated privileges and since"
@@ -23,7 +29,11 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
+################
+## UNPACKAGED ##
+################
 # Section for programs installed outside of package management
+
 mkdir -p ~/Programs
 cd ~/Programs
 # Firefox Nightly
@@ -34,7 +44,11 @@ echo -e "[Desktop Entry]\nName=Firefox Nightly\nExec=$HOME/Programs/firefox/fire
 cd ~/Programs
 cd ~/
 
+#########
+## DNF ##
+#########
 # Section for everything related to package management.
+
 # Start with updating everything
 dnf -y upgrade
 # Enable RPM Fusion
@@ -63,11 +77,20 @@ snapd dnfdragora paprefs pavucontrol gthumb discord slack
 #   cutting edge code possible!
 #   But for now - you don't.
 
+##########
+## SNAP ##
+##########
+# Section for everything snap-related.
+
 # Enable snap classic confinement
 ln -s /var/lib/snapd/snap /snap
-
 # Install Spotify
 snap install spotify
+
+###################
+## CONFIGURATION ##
+###################
+# Section for automatic configuration (gsettings, config files and such).
 
 # Set favorite apps
 gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gnome.Nautilus.desktop']"
@@ -79,6 +102,12 @@ gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gn
 #   * Views: sort folders before files
 #   * Behavior: Executable text files > Ask what to do
 #   * Search and preview: Loosest settings possible
+
+############
+## FINISH ##
+############
+# Section for anything that may be approppriate as a part of the epilogue
+# for this script.
 
 echo "ALL SET!"
 echo
