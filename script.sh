@@ -50,6 +50,10 @@ dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=Packag
 dnf -y groupupdate sound-and-video\
 dnf -y install gnome-power-manager transmission x264 fuse-exfat exfat-utils\
 snapd dnfdragora paprefs pavucontrol gthumb discord slack
+# Disabled packages:
+# * alacarte - for editing desktop entries in the app menu. I used it mostly to
+#   add the desktop entry for Firefox, but curently it generates automatically.
+#   Nevertheless it's a neat little app.
 
 # Enable snap classic confinement
 ln -s /var/lib/snapd/snap /snap
