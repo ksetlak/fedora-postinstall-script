@@ -124,4 +124,4 @@ if [[ "$line_containing_wget_bug_status" == *"Closed"* ]]; then
 fi
 
 
-read -n 1 -r -s -p $'OK, we\'re done. Press any key to exit.\n'
+read -n 1 -rsp $'OK, we\'re done. Press any key to exit.\n'
