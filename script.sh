@@ -3,7 +3,6 @@
 # TODO: Progress bar with a "spinner" and "Step 5 of 16: Installing packages..."
 # TODO: Codecs? (partially already there, but make sure it's an all inclusive ;) )
 # TODO: Configure Transmission
-# TODO: De-sudo selected entries (like creation of the launcher for Firefox or editing the favorite apps list)
 # TODO: Enable software repositories (rpmfusion is done, but some other like fedora-updates)
 # TODO: (Challenge ;) ) Install Pycharm automatically + configure to be the preview version + create a launcher.
 # TODO: Set keyboard shortcuts
