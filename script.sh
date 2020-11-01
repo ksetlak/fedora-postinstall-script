@@ -23,16 +23,6 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
-# Start with updating everything
-dnf -y upgrade
-
-# Enable RPM Fusion
-dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-# Enable wine repo
-# dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/$(rpm -E %fedora)/winehq.repo
-# Disabled as Fedora is current enough not to make this worth the hassle.
-
 # Section for programs installed outside of package management
 mkdir -p ~/Programs
 cd ~/Programs
@@ -44,6 +34,14 @@ echo -e "[Desktop Entry]\nName=Firefox Nightly\nExec=$HOME/Programs/firefox/fire
 cd ~/Programs
 cd ~/
 
+# Section for everything related to package management.
+# Start with updating everything
+dnf -y upgrade
+# Enable RPM Fusion
+dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# Enable wine repo
+# dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/$(rpm -E %fedora)/winehq.repo
+# Disabled as Fedora is current enough not to make this worth the hassle.
 # Install all the packages
 dnf -y groupupdate core # To install Appstream Metadata (package name: appstream-data)
 dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
