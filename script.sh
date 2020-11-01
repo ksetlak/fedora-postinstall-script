@@ -14,6 +14,7 @@
 # TODO: Set gthumb as the default image viewing program
 # TODO: gsettings enable touch-to-click touchpad behavior
 # TODO: Move software installed in the UNPACKAGED section to /opt
+# TODO: Merge all TODOs from the separate .odt file.
 
 ##############
 ## FOREWORD ##
