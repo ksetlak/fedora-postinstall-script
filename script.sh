@@ -8,6 +8,9 @@
 # TODO: Set keyboard shortcuts
 # TODO: Install Chrome unstable
 # TODO: Install atom Nightly
+# TODO: Install slack, skype-preview, discord
+# TODO: VLC & set as the default video player
+# TODO: Set gthumb as the default image viewing program
 
 if [ $EUID != 0 ]; then
     echo "You've run this script without elevated privileges and since"
