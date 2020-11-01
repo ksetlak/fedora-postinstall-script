@@ -39,9 +39,16 @@ cd ~/
 dnf -y upgrade
 # Enable RPM Fusion
 dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-# Enable wine repo
+# [DISABLED] Enable wine repo
 # dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/$(rpm -E %fedora)/winehq.repo
 # Disabled as Fedora is current enough not to make this worth the hassle.
+# [DISABLED] Install Skype preview
+# cd ~/Downloads
+# wget --show-progress -o /dev/null "https://repo.skype.com/latest/skypeforlinux-64-insider.rpm"
+# dnf -y localinstall ./skypeforlinux-64-insider.rpm
+# rm skypeforlinux-64-insider.rpm
+# cd ~/
+# Disabled as recently I'm simply not using it.
 # Install all the packages
 dnf -y groupupdate core # To install Appstream Metadata (package name: appstream-data)
 dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
@@ -52,6 +59,9 @@ snapd dnfdragora paprefs pavucontrol gthumb discord slack
 # * alacarte - for editing desktop entries in the app menu. I used it mostly to
 #   add the desktop entry for Firefox, but curently it generates automatically.
 #   Nevertheless it's a neat little app.
+# * winehq-staging - when you need your wine to be built from the most bleeding,
+#   cutting edge code possible!
+#   But for now - you don't.
 
 # Enable snap classic confinement
 ln -s /var/lib/snapd/snap /snap
