@@ -33,13 +33,16 @@ dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-releas
 # dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/$(rpm -E %fedora)/winehq.repo
 # Disabled as Fedora is current enough not to make this worth the hassle.
 
-# Download and install Firefox Nightly
-mkdir -p ~/Programs/
-cd ~/Programs/
+# Section for programs installed outside of package management
+mkdir -p ~/Programs
+cd ~/Programs
+# Firefox Nightly
 wget --show-progress --max-redirect=1 -o /dev/null -O firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US" # -o /dev/null/ is only a workaround for wget bug #51181
 tar -xf firefox.tar.bz2
-echo -en "[Desktop Entry]\nName=Firefox Nightly\nExec=/home/amarok/Programs/firefox/firefox %U\nComment=\nTerminal=false\nIcon=/home/amarok/Programs/firefox/browser/chrome/icons/default/default128.png\nType=Application\n" > "Firefox Nightly.desktop"
-
+rm firefox.tar.bz2
+echo -e "[Desktop Entry]\nName=Firefox Nightly\nExec=$HOME/Programs/firefox/firefox %U\nComment=\nTerminal=false\nIcon=$HOME/Programs/firefox/browser/chrome/icons/default/default128.png\nType=Application" > "~/.local/share/applications/Firefox Nightly.desktop"
+cd ~/Programs
+cd ~/
 
 # Install all the packages
 dnf -y install gnome-power-manager transmission x264 fuse-exfat exfat-utils snapd dnfdragora
