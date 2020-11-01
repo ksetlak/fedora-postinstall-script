@@ -8,9 +8,11 @@
 # TODO: Set keyboard shortcuts
 # TODO: Install Chrome unstable
 # TODO: Install atom Nightly
-# TODO: Install slack, skype-preview, discord
+# TODO: Configure Atom Nightly to use Ctrl+Alt+↑, Ctrl+Alt+↓ for cursor cloning
+# TODO: Install skype-preview
 # TODO: VLC & set as the default video player
 # TODO: Set gthumb as the default image viewing program
+# TODO: gsettings enable touch-to-click touchpad behavior
 
 if [ $EUID != 0 ]; then
     echo "You've run this script without elevated privileges and since"
@@ -57,7 +59,12 @@ snap install spotify
 gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gnome.Nautilus.desktop']"
 #  TODO: Window controls and other stuff normally set using tweaks
 #  TOOD: Unmap Ctrl+Alt+↑, Ctrl+Alt+↓ from switching workspaces; it's already done using Super+PgUp, Super+PgDn and we need Ctrl+Alt+↑, Ctrl+Alt+↓ for Atom cursor cloning
-#  TODO: Nautilus settings
+#  TODO: Nautilus settings:
+#   * Diminish the size of icons by two scroll “clicks”
+#   * Settings:
+#   * Views: sort folders before files
+#   * Behavior: Executable text files > Ask what to do
+#   * Search and preview: Loosest settings possible
 
 echo "ALL SET!"
 echo
