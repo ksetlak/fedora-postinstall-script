@@ -4,10 +4,11 @@
 # TODO: Codecs? (partially already there, but make sure it's an all inclusive ;) )
 # TODO: Configure Transmission
 # TODO: De-sudo selected entries (like creation of the launcher for Firefox or editing the favorite apps list)
-# TODO: Enable software repositories (rpmfusion is done, but some other fedora-updates)
+# TODO: Enable software repositories (rpmfusion is done, but some other like fedora-updates)
 # TODO: (Challenge ;) ) Install Pycharm automatically + configure to be the preview version + create a launcher.
 # TODO: Set keyboard shortcuts
 # TODO: Install Chrome unstable
+# TODO: Install atom Nightly
 
 if [ $EUID != 0 ]; then
     echo "You've run this script without elevated privileges and since"
@@ -52,6 +53,9 @@ snap install spotify
 
 # Set favorite apps
 gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gnome.Nautilus.desktop']"
+#  TODO: Window controls and other stuff normally set using tweaks
+#  TOOD: Unmap Ctrl+Alt+↑, Ctrl+Alt+↓ from switching workspaces; it's already done using Super+PgUp, Super+PgDn and we need Ctrl+Alt+↑, Ctrl+Alt+↓ for Atom cursor cloning
+#  TODO: Nautilus settings
 
 echo "ALL SET!"
 echo
