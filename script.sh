@@ -15,6 +15,7 @@
 # TODO: gsettings enable touch-to-click touchpad behavior
 # TODO: Move software installed in the UNPACKAGED section to /opt
 # TODO: Merge all TODOs from the separate .odt file.
+# TODO: Locally install VT220 font (https://github.com/svofski/glasstty)
 
 ##############
 ## FOREWORD ##
