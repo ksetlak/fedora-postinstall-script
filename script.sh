@@ -18,6 +18,8 @@
 # TODO: System-wide install of the VT220 font (https://github.com/svofski/glasstty)
 # TODO: Load CRT configuration
 # TODO: Set up bash clipboard shorthands based on https://stackoverflow.com/a/27456981/5306048
+# TODO: Add some gitconfig setup: email, name, default editor
+# TODO: Add cool git aliases (salvage from company laptop)
 
 ##############
 ## FOREWORD ##
