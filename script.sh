@@ -46,7 +46,7 @@ cd ~/Programs
 wget --show-progress --max-redirect=1 -o /dev/null -O firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US" # -o /dev/null/ is only a workaround for wget bug #51181
 tar -xf firefox.tar.bz2
 rm firefox.tar.bz2
-echo -e "[Desktop Entry]\nName=Firefox Nightly\nExec=$HOME/Programs/firefox/firefox %U\nComment=\nTerminal=false\nIcon=$HOME/Programs/firefox/browser/chrome/icons/default/default128.png\nType=Application" > "~/.local/share/applications/Firefox Nightly.desktop"
+echo -e "[Desktop Entry]\nName=Firefox Nightly\nExec=$HOME/Programs/firefox/firefox-bin %u\nComment=\nTerminal=false\nIcon=$HOME/Programs/firefox/browser/chrome/icons/default/default128.png\nType=Application" > "$HOME/.local/share/applications/Firefox Nightly.desktop"
 cd ~/Programs
 cd ~/
 
