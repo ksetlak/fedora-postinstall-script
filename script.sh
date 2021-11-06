@@ -97,8 +97,9 @@ snapd dnfdragora paprefs pavucontrol gthumb discord slack
 
 # Enable snap classic confinement
 ln -s /var/lib/snapd/snap /snap
-# Install Spotify
+# Install my snaps
 snap install spotify
+snap install --edge --devmode whatpulse
 
 ###################
 ## CONFIGURATION ##
