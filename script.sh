@@ -5,14 +5,11 @@
 # TODO: Configure Transmission
 # TODO: Enable software repositories (rpmfusion is done, but some other like fedora-updates)
 # TODO: (Challenge ;) ) Install Pycharm automatically + configure to be the preview version + create a launcher.
-# TODO: Set keyboard shortcuts
-# TODO: Install Chrome unstable
-# TODO: Install atom Nightly
-# TODO: Configure Atom Nightly to use Ctrl+Alt+↑, Ctrl+Alt+↓ for cursor cloning
-# TODO: Install skype-preview
-# TODO: VLC & set as the default video player
+# TODO: Set keyboard shortcuts: Ctrl+Alt+T = Terminal, Ctrl+Alt+N = System Monitor
+# TODO: Install Atom Nightly - how to get it to always point to the newest available package?
+# TODO: Install Slack - same as Atom: how to get it to always point to the newest available package?
+# TODO: Install VLC & set as the default video player
 # TODO: Set gthumb as the default image viewing program
-# TODO: gsettings enable touch-to-click touchpad behavior
 # TODO: Move software installed in the UNPACKAGED section to /opt
 # TODO: Merge all TODOs from the separate .odt file
 # TODO: System-wide install of the VT220 font (https://github.com/svofski/glasstty)
@@ -22,11 +19,12 @@
 # TODO: Add cool git aliases (salvage from company laptop)
 # TODO: Window controls and other stuff normally set using tweaks
 # TODO: Nautilus settings:
-#* Diminish the size of icons by two scroll “clicks”
-#* Settings:
-#* Views: sort folders before files
-#* Behavior: Executable text files > Ask what to do
-#* Search and preview: Loosest settings possible
+#   * Diminish the size of icons by two scroll “clicks”
+#   * Settings:
+#   * Views: sort folders before files
+#   * Behavior: Executable text files > Ask what to do
+#   * Search and preview: Loosest settings possible
+# TODO: (II) Disable the PCI WiFi card
 
 ##############
 ## FOREWORD ##
