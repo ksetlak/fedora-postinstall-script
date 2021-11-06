@@ -81,7 +81,7 @@ dnf -y groupupdate core # To install Appstream Metadata (package name: appstream
 dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 dnf -y groupupdate sound-and-video
 dnf -y install gnome-power-manager transmission x264 fuse-exfat exfat-utils\
-snapd dnfdragora paprefs pavucontrol gthumb discord slack
+ snapd dnfdragora paprefs pavucontrol gthumb discord slack # TODO paprefs probably conflicting with pulseaudio being distributed with pipewire -- investigate.
 # Disabled packages:
 # * alacarte - for editing desktop entries in the app menu. I used it mostly to
 #   add the desktop entry for Firefox, but curently it generates automatically.
