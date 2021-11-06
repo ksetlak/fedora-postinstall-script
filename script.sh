@@ -115,6 +115,33 @@ echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-down\': \'editor:add-select
 echo >> ~/.atom/keymap.cson
 
 
+#############
+## STARTUP ##
+#############
+# Section that configures startup jobs that manage all the quirks
+# of my crappy old HP 250 G3.
+
+# (I) Don't spin the HDD until its needed.
+# Command: `hdparm -y /dev/sdb`
+# Path: `/etc/systemd/system/secondary_hdd_powersave.service`
+
+echo [Unit] >> /etc/systemd/system/secondary_hdd_powersave.service
+echo Description=Spin down the secondary HDD on startup so it\'s on standby until actually needed  >> /etc/systemd/system/secondary_hdd_powersave.service
+echo  >> /etc/systemd/system/secondary_hdd_powersave.service
+echo [Service] >> /etc/systemd/system/secondary_hdd_powersave.service
+echo ExecStart=hdparm -y /dev/sdb >> /etc/systemd/system/secondary_hdd_powersave.service
+echo Type=oneshot >> /etc/systemd/system/secondary_hdd_powersave.service
+echo RemainAfterExit=yes >> /etc/systemd/system/secondary_hdd_powersave.service
+echo  >> /etc/systemd/system/secondary_hdd_powersave.service
+echo [Install] >> /etc/systemd/system/secondary_hdd_powersave.service
+echo WantedBy=multi-user.target >> /etc/systemd/system/secondary_hdd_powersave.service
+echo  >> /etc/systemd/system/secondary_hdd_powersave.service
+
+systemctl daemon-reload
+systemctl enable secondary_hdd_powersave.service
+
+# (II) Disable the PCI WiFi card
+
 
 ############
 ## FINISH ##
