@@ -108,6 +108,14 @@ snap install spotify
 # Set favorite apps
 gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gnome.Nautilus.desktop']"
 
+## Atom
+echo \'atom-text-editor\': > ~/.atom/keymap.cson
+echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-up\': \'editor:add-selection-above\' >> ~/.atom/keymap.cson
+echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-down\': \'editor:add-selection-below\' >> ~/.atom/keymap.cson
+echo >> ~/.atom/keymap.cson
+
+
+
 ############
 ## FINISH ##
 ############
