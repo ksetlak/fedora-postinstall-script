@@ -140,7 +140,7 @@ echo [Unit] >> /etc/systemd/system/secondary_hdd_powersave.service
 echo Description=Spin down the secondary HDD on startup so it\'s on standby until actually needed  >> /etc/systemd/system/secondary_hdd_powersave.service
 echo  >> /etc/systemd/system/secondary_hdd_powersave.service
 echo [Service] >> /etc/systemd/system/secondary_hdd_powersave.service
-echo ExecStart=hdparm -y /dev/sdb >> /etc/systemd/system/secondary_hdd_powersave.service
+echo ExecStart=/usr/sbin/hdparm -y /dev/sdb >> /etc/systemd/system/secondary_hdd_powersave.service
 echo Type=oneshot >> /etc/systemd/system/secondary_hdd_powersave.service
 echo RemainAfterExit=yes >> /etc/systemd/system/secondary_hdd_powersave.service
 echo  >> /etc/systemd/system/secondary_hdd_powersave.service
