@@ -20,6 +20,13 @@
 # TODO: Set up bash clipboard shorthands based on https://stackoverflow.com/a/27456981/5306048
 # TODO: Add some gitconfig setup: email, name, default editor
 # TODO: Add cool git aliases (salvage from company laptop)
+# TODO: Window controls and other stuff normally set using tweaks
+# TODO: Nautilus settings:
+#* Diminish the size of icons by two scroll “clicks”
+#* Settings:
+#* Views: sort folders before files
+#* Behavior: Executable text files > Ask what to do
+#* Search and preview: Loosest settings possible
 
 ##############
 ## FOREWORD ##
@@ -100,14 +107,6 @@ snap install spotify
 
 # Set favorite apps
 gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gnome.Nautilus.desktop']"
-#  TODO: Window controls and other stuff normally set using tweaks
-#  TOOD: Unmap Ctrl+Alt+↑, Ctrl+Alt+↓ from switching workspaces; it's already done using Super+PgUp, Super+PgDn and we need Ctrl+Alt+↑, Ctrl+Alt+↓ for Atom cursor cloning
-#  TODO: Nautilus settings:
-#   * Diminish the size of icons by two scroll “clicks”
-#   * Settings:
-#   * Views: sort folders before files
-#   * Behavior: Executable text files > Ask what to do
-#   * Search and preview: Loosest settings possible
 
 ############
 ## FINISH ##
