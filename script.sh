@@ -154,9 +154,9 @@ echo
 echo "Your fresh Fedora install is now customized to your liking and ready to rock!"
 echo "Now, there are a few things you have to do manually. See the list below!"
 echo
-echo "1. Reboot to fully enable snap support"
-echo "2. Log in to Firefox Sync"
-echo "3. Restore files from backup"
+echo "1. Reboot to fully enable snap support."
+echo "2. Log in to Firefox Sync."
+echo "3. Restore files from backup."
 
 line_containing_wget_bug_status=$(curl https://savannah.gnu.org/bugs/?51181 | grep "Most basic status of the item: is the item considered as dealt with or not." -A1 | tail -n1)
 if [[ "$line_containing_wget_bug_status" == *"Closed"* ]]; then
