@@ -79,7 +79,7 @@ dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-releas
 # Install all the packages
 dnf -y groupupdate core # To install Appstream Metadata (package name: appstream-data)
 dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-dnf -y groupupdate sound-and-video\
+dnf -y groupupdate sound-and-video
 dnf -y install gnome-power-manager transmission x264 fuse-exfat exfat-utils\
 snapd dnfdragora paprefs pavucontrol gthumb discord slack
 # Disabled packages:
