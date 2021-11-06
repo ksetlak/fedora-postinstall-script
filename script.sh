@@ -105,8 +105,15 @@ snap install spotify
 ###################
 # Section for automatic configuration (gsettings, config files and such).
 
+## Gnome
 # Set favorite apps
 gsettings set org.gnome.shell favorite-apps "['Firefox Nightly.desktop', 'org.gnome.Nautilus.desktop']"
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up []
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down []
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Super>Page_Up']
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Super>Page_Down']
 
 ## Atom
 echo \'atom-text-editor\': > ~/.atom/keymap.cson
