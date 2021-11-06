@@ -121,6 +121,10 @@ echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-up\': \'editor:add-selectio
 echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-down\': \'editor:add-selection-below\' >> ~/.atom/keymap.cson
 echo >> ~/.atom/keymap.cson
 
+## git
+git config --global user.name "Krzysztof Setlak"
+git config --global user.email "bigfoot19@wp.pl"
+
 
 #############
 ## STARTUP ##
