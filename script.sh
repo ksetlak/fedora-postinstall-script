@@ -1,3 +1,4 @@
+# TODO: Debug secondary_hdd_powersave.service
 # TODO: Error handling
 # TODO: Make this script a noecho
 # TODO: Progress bar with a "spinner" and "Step 5 of 16: Installing packages..."
