@@ -5,10 +5,9 @@
 # TODO: Codecs? (partially already there, but make sure it's an all inclusive ;) )
 # TODO: Configure Transmission
 # TODO: Enable software repositories (rpmfusion is done, but some other like fedora-updates)
-# TODO: (Challenge ;) ) Install Pycharm automatically + configure to be the preview version + create a launcher.
+# TODO: (Challenge ;) ) Install Pycharm Community automatically + configure to be the preview version + create a launcher.
 # TODO: Set keyboard shortcuts: Ctrl+Alt+T = Terminal, Ctrl+Alt+N = System Monitor
-# TODO: Install Atom Nightly - how to get it to always point to the newest available package?
-# TODO: Install Slack - same as Atom: how to get it to always point to the newest available package?
+# TODO: Install Slack - how to get it to always point to the newest available package?
 # TODO: Install VLC & set as the default video player
 # TODO: Set gthumb as the default image viewing program
 # TODO: Move software installed in the UNPACKAGED section to /opt
@@ -20,7 +19,7 @@
 # TODO: Add cool git aliases (salvage from company laptop)
 # TODO: Window controls and other stuff normally set using tweaks
 # TODO: Nautilus settings:
-#   * Diminish the size of icons by two scroll “clicks”
+#   * Decrease the size of icons by two scroll “clicks”
 #   * Settings:
 #   * Views: sort folders before files
 #   * Behavior: Executable text files > Ask what to do
@@ -115,12 +114,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up []
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down []
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Super>Page_Up']
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left ['<Super>Page_Down']
-
-## Atom
-echo \'atom-text-editor\': > ~/.atom/keymap.cson
-echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-up\': \'editor:add-selection-above\' >> ~/.atom/keymap.cson
-echo -ne \\t >> ~/.atom/keymap.cson; echo \'ctrl-alt-down\': \'editor:add-selection-below\' >> ~/.atom/keymap.cson
-echo >> ~/.atom/keymap.cson
 
 ## git
 git config --global user.name "Krzysztof Setlak"
