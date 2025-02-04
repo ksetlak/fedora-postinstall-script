@@ -1,5 +1,6 @@
 # TODO: Debug secondary_hdd_powersave.service
 # TODO: Error handling
+# TODO: TrueType VT220 Font (http://sensi.org/~svo/glasstty/)
 # TODO: Make this script a noecho
 # TODO: Progress bar with a "spinner" and "Step 5 of 16: Installing packages..."
 # TODO: Codecs? (partially already there, but make sure it's an all inclusive ;) )
