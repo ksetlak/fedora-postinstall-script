@@ -26,6 +26,7 @@
 #   * Behavior: Executable text files > Ask what to do
 #   * Search and preview: Loosest settings possible
 # TODO: (II) Disable the PCI WiFi card
+# TODO: Potentially install & configure burn-my-windows?
 
 ##############
 ## FOREWORD ##
