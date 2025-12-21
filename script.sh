@@ -35,7 +35,7 @@
 
 if [ $EUID != 0 ]; then
     echo "You've run this script without elevated privileges and since"
-    echo "it installs stuff and does a lot  of other super-userey stuff"
+    echo "it installs stuff and does a lot of other super-userey stuff"
     echo "you have to grant it this ultimate power by typing in your password..."
     echo "... or press Ctrl-C to abort!"
     sudo "$0" "$@"
@@ -101,6 +101,12 @@ ln -s /var/lib/snapd/snap /snap
 # Install my snaps
 snap install spotify
 snap install --edge --devmode whatpulse
+
+#############
+## FLATPAK ##
+#############
+
+flatpak install flathub it.mijorus.gearlever
 
 ###################
 ## CONFIGURATION ##
